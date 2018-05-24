@@ -1,0 +1,53 @@
+.navbar{
+  display: flex;
+  align-items: center;
+  padding: 0.4rem;
+  background: $yellow;
+  color: $white;
+  h1{
+    padding-left: 20px;
+    font-size: 28px;
+  }
+}
+
+.navbar__item{
+  text-decoration: none;
+  color: $black;
+  padding: 0 20px;
+  font-weight: 600;
+  &:hover{
+    color: $red;
+  }
+}
+
+.navbar__end{
+  margin-left: auto;
+}
+
+@media screen and (max-width:500px){
+  header{
+    flex-direction: column;
+    h1{
+      font-size: 24px;
+    }
+  }
+  .header__end{
+    margin: 0;
+  }
+}
+
+.navbar__side{
+  flex-direction: column;
+  align-items: flex-start;
+  background: $white;
+  width: 100%;
+  border: 1px solid $black;
+  position: relative;
+  .navbar__item{
+    padding: 10px;
+    width: 100%;
+    &.active{
+      background: $yellow;
+    }
+  }
+}
